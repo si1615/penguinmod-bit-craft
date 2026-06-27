@@ -23,11 +23,14 @@ By default, PenguinMod and Scratch treat all variables as standard high-precisio
 [signed v] (8) bit of (130)     // Returns -126 (Signed byte overflow simulation)
 ```
 
-## Installation
-
-1. Copy the source code from `extension.js`.
+## Installation From Link
+1. Copy ```https://raw.githubusercontent.com/si1615/penguinmod-bit-craft/refs/heads/main/penguinmod-bit-craft-ext.js```
 2. Open your project in [PenguinMod](https://penguinmod.com).
 3. Open the **Extensions** menu and click **Load Custom Extension**.
-4. Paste the code and click **Load**.
+4. Switch to the **URL** tab if you aren't on it already
+5. Paste the URL you copied
+6. **IMPORTANT Check run unsandboxed as if you do not it will not work**
+7. Click Load
+8. **Enjoy!**
 
-## Made By Me and Google AI Mode
+## Made By Me and Google AI Mode becuse i wanted to make a nes emulator
