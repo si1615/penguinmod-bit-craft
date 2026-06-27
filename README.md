@@ -24,7 +24,10 @@ By default, PenguinMod and Scratch treat all variables as standard high-precisio
 ```
 
 ## Installation From Link
-1. Copy ```https://raw.githubusercontent.com/si1615/penguinmod-bit-craft/refs/heads/main/penguinmod-bit-craft-ext.js```
+1. Copy below:
+```web
+https://raw.githubusercontent.com/si1615/penguinmod-bit-craft/refs/heads/main/penguinmod-bit-craft-ext.js
+```
 2. Open your project in [PenguinMod](https://penguinmod.com).
 3. Open the **Extensions** menu and click **Load Custom Extension**.
 4. Switch to the **URL** tab if you aren't on it already
