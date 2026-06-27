@@ -8,7 +8,7 @@
         return;
     }
 
-    class BitConverterExtension {
+    class BitCraft {
         getInfo() {
             return {
                 id: 'bitConverterExt',
