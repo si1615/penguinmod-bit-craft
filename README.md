@@ -29,3 +29,5 @@ By default, PenguinMod and Scratch treat all variables as standard high-precisio
 2. Open your project in [PenguinMod](https://penguinmod.com).
 3. Open the **Extensions** menu and click **Load Custom Extension**.
 4. Paste the code and click **Load**.
+
+## Made By Me and Google AI Mode
