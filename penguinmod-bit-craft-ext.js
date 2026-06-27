@@ -1,11 +1,18 @@
 (function(Scratch) {
     'use strict';
 
+    // Automatically check if the user is running unsandboxed
+    // This removes the risk of the extension breaking silently
+    if (!Scratch.extensions.unsandboxed) {
+        alert("This extension needs to be run UNSANDBOXED! Please check 'Run unsandboxed' when loading the URL.");
+        return;
+    }
+
     class BitConverterExtension {
         getInfo() {
             return {
                 id: 'bitConverterExt',
-                name: 'Bit Converter',
+                name: 'Bit Craft',
                 color1: '#4C6EF5', 
                 color2: '#364FC7', 
                 blocks: [
@@ -32,7 +39,7 @@
                 ],
                 menus: {
                     typeMenu: {
-                        acceptReporters: true, // Allows variables and reporters to drop into the menu
+                        acceptReporters: true, 
                         items: ['signed', 'unsigned']
                     }
                 }
@@ -44,11 +51,9 @@
             let bits = Math.max(1, Math.min(32, Math.trunc(Number(args.BITS)) || 16));
             const maxRange = Math.pow(2, bits);
 
-            // Normalize input to determine if it means 'signed' or 'unsigned'
             let isSigned = false;
             let typeInput = args.TYPE;
 
-            // Handle strings, booleans, and numbers
             if (typeof typeInput === 'string') {
                 typeInput = typeInput.trim().toLowerCase();
                 if (typeInput === 'true' || typeInput === '1' || typeInput === 'signed') {
@@ -61,14 +66,12 @@
             }
 
             if (!isSigned) {
-                // Unsigned Math (0, false, 'unsigned')
                 let unsignedVal = val % maxRange;
                 if (unsignedVal < 0) {
                     unsignedVal += maxRange;
                 }
                 return unsignedVal;
             } else {
-                // Signed Math (1, true, 'signed')
                 let unsignedVal = val % maxRange;
                 if (unsignedVal < 0) {
                     unsignedVal += maxRange;
